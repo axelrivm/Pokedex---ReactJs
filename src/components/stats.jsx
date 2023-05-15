@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-export const Stats = () => {
-    const url = "https://pokeapi.co/api/v2/pokemon/1/"
+export const Stats = (props) => {
+    const {contador} = props
+
+    const url = `https://pokeapi.co/api/v2/pokemon/${contador}/`
     const [stat, setStats] = useState([])
 
     const fetchApi = async () => {
@@ -14,7 +16,7 @@ export const Stats = () => {
  
     useEffect(() => {
       fetchApi()
-    }, [])
+    }, [contador])
 
     return(
         <div className="card" style={{width: 300, height: 300}}>

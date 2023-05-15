@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-export const InfoPerfil = () => {
-    const url = "https://pokeapi.co/api/v2/pokemon-form/1/"
-    const url2 = "https://pokeapi.co/api/v2/pokemon/1/"
+export const InfoPerfil = (props) => {
+    const {contador} = props
+
+    const url = `https://pokeapi.co/api/v2/pokemon/${contador}/`
     const [todo, setTodos] = useState([])
     const [imagen, setImagenes] = useState([]) 
 
@@ -13,7 +14,7 @@ export const InfoPerfil = () => {
     }
 
     const fetchImagen = async () => {
-        const response = await fetch(url2)
+        const response = await fetch(url)
         const responseJSON = await response.json()
         setImagenes(responseJSON.sprites)       
     }
@@ -21,7 +22,7 @@ export const InfoPerfil = () => {
     useEffect( () => {
        fetchApi()
        fetchImagen()
-    }, [])
+    }, [contador])
     
     return ( 
 
