@@ -19,8 +19,8 @@ export const Abilities = (props) => {
     }, [contador])
 
     return(
-      <div className="card" style={{width: 240, height: 70}}>
-          <div className="card-body">
+      <div className='card' style={{width: 240, height: 70}}>
+          
             <ul>
                 {
                   Array.isArray(abilities) ?
@@ -30,7 +30,7 @@ export const Abilities = (props) => {
                   : <h1>NO INFO</h1>
                 }
               </ul>
-          </div>
+          
       </div>
     )
 }

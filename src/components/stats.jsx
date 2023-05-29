@@ -19,8 +19,8 @@ export const Stats = (props) => {
     }, [contador])
 
     return(
-        <div className="card" style={{width: 300, height: 300}}>
-            <div className="card-body">
+        <div className='card' style={{width: 600, height: 300}}>
+            <div className='card-body'>
               <ul>
                 {
                   Array.isArray(stat) ?

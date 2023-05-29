@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-export const Evolution = () => {
-    const url = "https://pokeapi.co/api/v2/evolution-chain/1/"
+export const Evolution = (props) => {
+    const {contador} = props
+    const url = `https://pokeapi.co/api/v2/pokemon/${contador}/`
     const [evolution, setEvolutions] = useState([])
 
     const fetchApi = async () => {
