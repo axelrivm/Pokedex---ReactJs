@@ -8,7 +8,7 @@ export const Evolution = (props) => {
     const fetchApi = async () => {
       const response = await fetch(url)
       const evolutionJSON = await response.json()
-      setEvolutions(evolutionJSON.chain.evolves_to)  
+      setEvolutions(evolutionJSON.species)  
       
     }
  

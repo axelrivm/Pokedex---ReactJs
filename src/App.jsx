@@ -2,9 +2,10 @@ import './App.css';
 import { InfoPerfil } from './components/perfil';
 import { Stats } from './components/stats';
 import { Abilities } from './components/abilities';
-import { Evolution } from './components/evolution';
-import {React, useState, useEffect} from 'react';
+import {React, useState} from 'react';
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs';
+import logo from './assets/img/pokedex.png';
+import fondo from './assets/img/fondo2.jpg';
 
 function App() {
 
@@ -19,17 +20,16 @@ function App() {
    console.log(cont)
 
   return (
-    <div className= 'bg-success'>
-      <header>
-        <h1 style={{"text-align" : "center"}}>POKEDEX</h1> 
-      </header>
+    <div style={{backgroundImage: `url(${fondo})`, display: 'block'}}>
 
+      <div >
+         <img src={logo} alt="logo" className="rounded mx-auto d-block"/>
+      </div>
       
-
       <div className='card bg-secondary'>
-
-      <button onClick={restar} className='bg-danger'><BsFillArrowLeftCircleFill /></button>
+         <button onClick={restar} className='bg-danger'><BsFillArrowLeftCircleFill /></button>
          <div className='card-body'>
+
             <div className='row'>
                <div className='col'>
                   <InfoPerfil contador={cont}/>

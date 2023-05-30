@@ -28,7 +28,7 @@ export const Stats = (props) => {
                       <div>
                       <text style={{ textTransform: 'uppercase'}}>{item.stat.name}:</text>
                       <div className="progress">
-                        <div className="progress-bar" role="progressbar" style={{width: item.base_stat}} aria-valuenow={item.base_stat} aria-valuemin="0" aria-valuemax="100"></div>
+                        <div className="progress-bar" role="progressbar" style={{width: item.base_stat}} aria-valuenow={item.base_stat} aria-valuemin="0" aria-valuemax="100">{item.base_stat}</div>
                       </div>
                       </div>
                   ))
